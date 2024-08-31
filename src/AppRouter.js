@@ -23,7 +23,7 @@ const AppRouter = () => {
   return (
     <>
       <Navbar navigateTo={navigateTo} />
-    <Home />
+    <Home navigateTo={navigateTo} />
       {loading && <ProgressBar />}
       {!loading && (
         <Routes>
