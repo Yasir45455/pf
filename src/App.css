@@ -1,0 +1,99 @@
+.bg-custom
+{
+    background-color: #2e3dda !important;
+}
+.text-gradient
+{
+    color: #2e3dda !important;
+}
+.border-custom
+{
+    border: 3px solid #2e3dda !important;
+}
+.verticalflip {
+    height: 100px; /* Adjust the height according to your needs */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .verticalflip span {
+    display: block;
+    height: 50px; /* Match the height of the container */
+    line-height: 50px; /* Align text vertically */
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transform: translateY(100%);
+    animation: flip 6s infinite;
+    font-size: 30px;
+  }
+  
+  .verticalflip span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .verticalflip span:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  .verticalflip span:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  @keyframes flip {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    10% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    40% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  
+  .btnss div {
+    width: 200px;
+    min-width: 200px;
+  }
+  
+  /* Active filter button */
+.active-filter {
+  background-color: #0F2B92; /* Your preferred background color */
+  color: white;
+  border: none;
+}
+
+/* Inactive filter buttons */
+.inactive-filter {
+  background-color: transparent;
+  border: 2px solid #0F2B92; /* Your preferred border color */
+  color: #0F2B92;
+}
+
+/* Optional: Hover effect for inactive buttons */
+.inactive-filter:hover {
+  background-color: #0F2B92;
+  color: white;
+}
+
+
+  @media (max-width: 576px) {
+    .btnss div {
+      width: 100% !important; /* 100% width on small devices */
+      min-width: unset; /* Reset min-width to ensure full width */
+    }
+  }
+  
