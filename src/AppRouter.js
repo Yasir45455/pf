@@ -27,6 +27,7 @@ const AppRouter = () => {
       {!loading && (
         <Routes>
           <Route path="/" exact element={<Home />} />
+        <Route path="/pf" exact element={<Home />} />
           <Route path="/home" exact element={<Home />} />
           <Route path="/aboutus" exact element={<AboutUsPage />} />
           <Route path="/skills" exact element={<SkillsAndExperience />} />
