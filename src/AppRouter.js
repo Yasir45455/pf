@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import AboutUsPage from "./pages/AboutUs";
 import Home from "./pages/HomeDesign";
 import SkillsAndExperience from "./pages/SkillsSection";
@@ -22,18 +23,15 @@ const AppRouter = () => {
   return (
     <>
       <Navbar navigateTo={navigateTo} />
-    <Home navigateTo={navigateTo} />
       {loading && <ProgressBar />}
-      {!loading && (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/aboutus" element={<AboutUsPage />} />
-          <Route path="/skills" element={<SkillsAndExperience />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<ContactSection />} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/aboutus" element={<AboutUsPage />} />
+        <Route path="/skills" element={<SkillsAndExperience />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<ContactSection />} />
+      </Routes>
     </>
   );
 };
