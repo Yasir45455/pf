@@ -121,7 +121,7 @@ const AboutSection = () => {
                   </li>
 
                   <li>
-                    <strong>Status:</strong> <span>Married</span>
+                    <strong>:</strong> <span>Married</span>
                   </li>
                 </ul>
               </div>
