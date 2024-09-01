@@ -26,13 +26,14 @@ const AppRouter = () => {
       {loading && <ProgressBar />}
       {!loading && (
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/home" exact element={<Home />} />
-          <Route path="/aboutus" exact element={<AboutUsPage />} />
-          <Route path="/skills" exact element={<SkillsAndExperience />} />
-          <Route path="/portfolio" exact element={<Portfolio />} />
-          <Route path="/contact" exact element={<ContactSection />} />
-        </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/home" element={<Home />} />
+  <Route path="/aboutus" element={<AboutUsPage />} />
+  <Route path="/skills" element={<SkillsAndExperience />} />
+  <Route path="/portfolio" element={<Portfolio />} />
+  <Route path="/contact" element={<ContactSection />} />
+</Routes>
+
       )}
     </>
   );
