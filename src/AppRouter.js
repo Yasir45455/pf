@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AboutUsPage from "./pages/AboutUs";
+import Home from "./pages/HomeDesign";
+import SkillsAndExperience from "./pages/SkillsSection";
+import Navbar from "./pages/Navbar";
+import Portfolio from "./pages/Portfolio";
+import ContactSection from "./pages/ContactUs";
+import ProgressBar from "./pages/Progressbar/Progressbar";
 
-import AboutUsPage from "./pages/AboutUs.js";
-import Home from "./pages/HomeDesign.js";
-import SkillsAndExperience from "./pages/SkillsSection.js";
-import Navbar from "./pages/Navbar.js";
-import Portfolio from "./pages/Portfolio.js";
-import ContactSection from "./pages/ContactUs.js";
-import ProgressBar from "./pages/Progressbar/Progressbar.js";
 const AppRouter = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -17,7 +16,7 @@ const AppRouter = () => {
     setTimeout(() => {
       setLoading(false);
       navigate(path);
-    }, 1500); // 3-second delay before navigation
+    }, 1500); // 1.5-second delay before navigation
   };
 
   return (
@@ -26,14 +25,13 @@ const AppRouter = () => {
       {loading && <ProgressBar />}
       {!loading && (
         <Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/home" element={<Home />} />
-  <Route path="/aboutus" element={<AboutUsPage />} />
-  <Route path="/skills" element={<SkillsAndExperience />} />
-  <Route path="/portfolio" element={<Portfolio />} />
-  <Route path="/contact" element={<ContactSection />} />
-</Routes>
-
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/skills" element={<SkillsAndExperience />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<ContactSection />} />
+        </Routes>
       )}
     </>
   );
